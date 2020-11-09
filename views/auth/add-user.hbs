@@ -1,0 +1,20 @@
+<h2>Signup</h2>
+<form action="/add-user" method="post">
+  <label for="username-field">Username:</label>
+  <input type="text" name="username" id="username-field">
+  <label for="password-field">Password:</label>
+  <input type="password" name="password" id="password-field">
+  <label for="role-field">Role:</label>
+  <select name="role" id="role-field">
+    <option value="BOSS">BOSS</option>
+    <option value="DEV">DEV</option>
+    <option value="TA">TA</option>
+    <option value="STUDENT">STUDENT</option>
+    <option value="GUEST" selected="selected">GUEST</option>
+  </select>
+  <br><br>
+  {{#if message}}
+    <div class="error-message">{{message}}</div>
+  {{/if}}
+  <button>Add</button>
+</form>
